@@ -1,0 +1,9 @@
+ats/
+├── app.py
+├── pages/
+│   ├── 1_Check_Your_ATS.py
+│   └── 2_Make_Your_Resume.py
+├── utils/
+│   ├── gemini_utils.py
+│   └── docx_utils.py
+├── .env
