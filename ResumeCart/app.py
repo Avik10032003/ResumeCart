@@ -4,7 +4,7 @@ import streamlit as st
 import os
 import io
 from PIL import Image
-import pdf2image
+import pdfplumber
 import google.generativeai as genai
 import matplotlib.pyplot as plt
 import mplcursors
