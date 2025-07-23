@@ -47,7 +47,7 @@ def input_pdf_setup(uploaded_file):
         with pdfplumber.open(uploaded_file) as pdf:
             first_page = pdf.pages[0]
             text = first_page.extract_text()
-                return text  # Return only plain extracted text, not a dict
+            return text  # ✅ CORRECT indentation
     else:
         raise FileNotFoundError("No file uploaded")
 
