@@ -8,4 +8,4 @@ plotpy
 fpdf
 mplcursors
 extras
-docx
+python-docx
