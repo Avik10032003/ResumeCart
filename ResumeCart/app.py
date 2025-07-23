@@ -27,7 +27,7 @@ def get_gemini_response(input_prompt, pdf_content, jd, retries=3):
     
     for attempt in range(retries):
         try:
-            response = model.generate_content([input_prompt, pdf_content[0], jd])
+            response = model.generate_content([input_prompt, pdf_content, jd])
             return response.text
         except google.api_core.exceptions.ResourceExhausted as e:
             retry_seconds = 60  # Default
@@ -47,11 +47,7 @@ def input_pdf_setup(uploaded_file):
         with pdfplumber.open(uploaded_file) as pdf:
             first_page = pdf.pages[0]
             text = first_page.extract_text()
-            pdf_parts = [{
-                "mime_type": "text/plain",
-                "data": text
-            }]
-            return pdf_parts
+                return text  # Return only plain extracted text, not a dict
     else:
         raise FileNotFoundError("No file uploaded")
 
