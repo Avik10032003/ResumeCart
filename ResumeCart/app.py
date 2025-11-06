@@ -268,6 +268,7 @@ elif menu == "Make Your Resume":
     email = st.text_input("Email")
     phone = st.text_input("Phone Number")
     linkedin = st.text_input("LinkedIn URL")
+    github = st.text_input("Github URL")
     objective = st.text_area("Career Objective")
     education = st.text_area("Education")
     skills = st.text_area("Skills")
@@ -283,6 +284,7 @@ elif menu == "Make Your Resume":
             "email": email,
             "phone": phone,
             "linkedin": linkedin,
+            "github" : github,
             "objective": objective,
             "education": education,
             "skills": skills,
@@ -300,3 +302,4 @@ elif menu == "Make Your Resume":
             file_name="Generated_Resume.docx",
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         )
+
